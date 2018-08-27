@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  OrangeB
+
+  Created by Víctor Varillas on 27/08/2018.
+  Copyright © 2018 VVL. All rights reserved.
+*/
+
+"txt_last_transaction" = "Última transacción";
+"txt_previous_transactions" = "Transacciones anteriores";
+"txt_fee_text" = "Comisión: ";
+"txt_no_internet" = "No hay conexión a Internet";
+"txt_cannot_get_latest_transactions" = "No fue posible obtener las últimas transacciones";
+"txt_OK" = "Aceptar";
+"txt_balance" = "Saldo: ";
