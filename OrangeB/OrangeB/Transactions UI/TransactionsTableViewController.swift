@@ -19,6 +19,7 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
 
     // MARK: *** Public ***
 
+    // Data provider is going to provide data to the table
     open var dataProvider: TransactionsDataProvider?
 
     override open func viewDidLoad() {
@@ -43,6 +44,7 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
             TransactionManagerService.fetchAndUpdateTransactions {
                 print("Fetch completed")
                 
+                // UI tasks should run on the main thread
                 DispatchQueue.main.async(execute: {
                     self.dataProvider = TransactionsDataProvider()
                     self.dataProvider?.managedObjectContext = self.managedObjectContext
@@ -60,9 +62,11 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
     
     // MARK: - *** Private ***
 
+    
     fileprivate lazy var managedObjectContext: NSManagedObjectContext = CoreDataService.sharedManagedObjectContext()!
     fileprivate var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 50, height: 50)) as UIActivityIndicatorView
     
+    // Set the spin indicator that indicates we are retrieving data from server
     private func setActivityIndicator(){
         activityIndicator.center = CGPoint(x: self.view.center.x, y: self.view.center.y - 50)
         activityIndicator.hidesWhenStopped = true

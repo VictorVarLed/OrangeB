@@ -65,7 +65,7 @@
                                     <outlet property="ibanNumberLabel" destination="r77-9Z-xnM" id="DaS-Ay-Hwo"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TransactionTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionTableCell" rowHeight="80" id="OrX-gk-7NC" customClass="TransactionTableCell" customModule="OrangeB" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TransactionTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TransactionTableCell" rowHeight="80" id="OrX-gk-7NC" customClass="TransactionTableCell" customModule="OrangeB" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="148" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OrX-gk-7NC" id="x1X-Zv-Q7Y">

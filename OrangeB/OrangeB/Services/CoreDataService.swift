@@ -208,6 +208,7 @@ open class CoreDataService: ServiceProtocol {
         return URL
     }
     
+    // Old incompatible stores will be saved in a different file
     fileprivate func nameForIncompatibleStore() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.formatterBehavior = DateFormatter.Behavior.behavior10_4
