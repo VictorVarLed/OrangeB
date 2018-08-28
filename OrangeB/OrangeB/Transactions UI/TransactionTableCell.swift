@@ -50,7 +50,6 @@ open class TransactionTableCell: UITableViewCell {
         self.transactionDescriptionLabel.text = transaction.desc
     }
     
-    
     // MARK: - *** Private ***
     fileprivate weak var transaction:Transaction!
     

@@ -10,8 +10,7 @@ import UIKit
 import CoreData
 import Foundation
 
-open class BalanceTableCell: UITableViewCell
-{
+open class BalanceTableCell: UITableViewCell {
     // MARK: - *** Public ***
     open static var uniqueIdentifier:String = "BalanceTableCell"
     

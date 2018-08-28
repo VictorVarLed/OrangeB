@@ -55,7 +55,7 @@ open class TransactionsDataProvider: NSObject, TransactionsDataProviderProtocol 
 }
 
 extension TransactionsDataProvider: UITableViewDataSource {
-
+    
     public func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 1 {
             return NSLocalizedString("txt_last_transaction",  comment: "Last transaction")
