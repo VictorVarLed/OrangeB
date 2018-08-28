@@ -17,10 +17,30 @@ open class TransactionsDataProvider: NSObject, TransactionsDataProviderProtocol 
     
     var _fetchedResultsController: NSFetchedResultsController<Transaction>?
     
+    // Get the transaction for a specific indexPath
     open func transactionForIndexPath(_ indexPath: IndexPath) -> Transaction? {
         return fetchedResultsController.object(at: indexPath)
     }
     
+    // Get account balance
+    public func getBalance() -> Float {
+        var totalBalance:Float = 0.0
+        
+        for transaction in self.fetchedResultsController.fetchedObjects! {
+            totalBalance = totalBalance + transaction.amount!.floatValue + transaction.fee!.floatValue
+        }
+        return totalBalance
+    }
+    
+    // Get total number of transactions
+    public func getNumberOfTransactions() -> Int {
+        guard let numberOfTransactions = self.fetchedResultsController.fetchedObjects?.count else {
+            return 0
+        }
+        return numberOfTransactions
+    }
+    
+    // Fetch all the transactions from the database
     open func getTransactionsFromDatabase() {
         let sortDescriptor1 = NSSortDescriptor(key: "date", ascending: false)
         self.fetchedResultsController.fetchRequest.sortDescriptors = [sortDescriptor1]
@@ -68,22 +88,6 @@ extension TransactionsDataProvider: UITableViewDataSource {
         }
         // Default
         return 0
-    }
-    
-    public func getNumberOfTransactions() -> Int {
-        guard let numberOfTransactions = self.fetchedResultsController.fetchedObjects?.count else {
-            return 0
-        }
-        return numberOfTransactions
-    }
-    
-    public func getBalance() -> Float {
-        var totalBalance:Float = 0.0
-        
-        for transaction in self.fetchedResultsController.fetchedObjects! {
-            totalBalance = totalBalance + transaction.amount!.floatValue + transaction.fee!.floatValue
-        }
-        return totalBalance
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -145,6 +149,7 @@ extension TransactionsDataProvider: NSFetchedResultsControllerDelegate {
         return _fetchedResultsController!
     }
     
+    // If the NSFetchedResultsController changes the table should reload to show the changes
     public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         DispatchQueue.main.async(execute: {
             self.tableView.reloadData()

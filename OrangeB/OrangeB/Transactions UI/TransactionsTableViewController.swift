@@ -25,7 +25,7 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
 
         super.viewDidLoad()
 
-        // Activity Indicator
+        // Set activity indicator
         self.setActivityIndicator()
 
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
@@ -36,10 +36,7 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
 
         // If there is no Internet connection
         if ReachabilityService.currentReachabilityStatus == ReachabilityService.NetworkStatus.notReachable {
-            
-            let alert = UIAlertController(title: NSLocalizedString("txt_no_internet", comment: "No internet connection"), message: NSLocalizedString("txt_cannot_get_latest_transactions", comment: "Unable to get transactions"), preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("txt_OK", comment: "OK"), style: UIAlertActionStyle.cancel, handler: {_ in}))
-            self.present(alert, animated: true, completion: nil)
+            self.showNoInternetConnection()
             
         // If there is Internet connection
         } else {
@@ -72,6 +69,12 @@ class TransactionsTableViewController: UITableViewController, NSFetchedResultsCo
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
         self.tableView.addSubview(activityIndicator)
         activityIndicator.startAnimating()
+    }
+    
+    private func showNoInternetConnection() {
+        let alert = UIAlertController(title: NSLocalizedString("txt_no_internet", comment: "No internet connection"), message: NSLocalizedString("txt_cannot_get_latest_transactions", comment: "Unable to get transactions"), preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("txt_OK", comment: "OK"), style: UIAlertActionStyle.cancel, handler: {_ in}))
+        self.present(alert, animated: true, completion: nil)
     }
 
     // MARK: - *** TableView Delegate

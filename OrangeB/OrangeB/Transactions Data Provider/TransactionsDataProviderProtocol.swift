@@ -15,6 +15,7 @@ public protocol TransactionsDataProviderProtocol: UITableViewDataSource {
     var tableView: UITableView! {get set}
     
     func transactionForIndexPath(_ indexPath: IndexPath) -> Transaction?
+    func getBalance() -> Float
     func getNumberOfTransactions() -> Int
     func getTransactionsFromDatabase()
 }

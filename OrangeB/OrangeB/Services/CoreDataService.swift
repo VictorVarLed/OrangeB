@@ -228,6 +228,7 @@ open class CoreDataService: ServiceProtocol {
         }
     }
     
+    // This method helps to perform taks in the managed object context and later save them
     fileprivate func performOperationsAndSave(_ operationsClosure:@escaping (NSManagedObjectContext) -> Void, completionClosure:@escaping () -> Void) {
         self.coreDataQueue.async(execute: {
             [weak self] in

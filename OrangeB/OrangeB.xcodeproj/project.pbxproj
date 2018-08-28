@@ -18,6 +18,7 @@
 		8F7778BE2132C2D80063CA70 /* TransactionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7778BD2132C2D80063CA70 /* TransactionTableCell.swift */; };
 		8F7778C02132C64E0063CA70 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7778BF2132C64E0063CA70 /* ReachabilityService.swift */; };
 		8F7778C42132CCA10063CA70 /* BalanceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7778C32132CCA00063CA70 /* BalanceTableCell.swift */; };
+		8FE07E59213529DA0099348A /* TransactionsTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE07E58213529DA0099348A /* TransactionsTableViewControllerTests.swift */; };
 		8FE5F220212F099B004B64C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F21F212F099B004B64C0 /* AppDelegate.swift */; };
 		8FE5F222212F099B004B64C0 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE5F221212F099B004B64C0 /* TransactionsTableViewController.swift */; };
 		8FE5F225212F099B004B64C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE5F223212F099B004B64C0 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		8F7778BD2132C2D80063CA70 /* TransactionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableCell.swift; sourceTree = "<group>"; };
 		8F7778BF2132C64E0063CA70 /* ReachabilityService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		8F7778C32132CCA00063CA70 /* BalanceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableCell.swift; sourceTree = "<group>"; };
+		8FE07E58213529DA0099348A /* TransactionsTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewControllerTests.swift; sourceTree = "<group>"; };
 		8FE5F21C212F099B004B64C0 /* OrangeB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE5F21F212F099B004B64C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FE5F221212F099B004B64C0 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE5F239212F099D004B64C0 /* Info.plist */,
+				8FE07E58213529DA0099348A /* TransactionsTableViewControllerTests.swift */,
 			);
 			path = OrangeBTests;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE07E59213529DA0099348A /* TransactionsTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,7 @@ import UIKit
 import CoreData
 import Foundation
 
-open class TransactionTableCell: UITableViewCell
-{
+open class TransactionTableCell: UITableViewCell {
     // MARK: - *** Public ***
     open static var uniqueIdentifier:String = "TransactionTableCell"
     
@@ -48,7 +47,6 @@ open class TransactionTableCell: UITableViewCell
                 self.transactionAmountLabel.textColor = UIColor.green
             }
         }
-        
         self.transactionDescriptionLabel.text = transaction.desc
     }
     
